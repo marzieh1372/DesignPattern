@@ -1,10 +1,10 @@
-package designpattern.proxy;
+package designpattern.proxy.simpleproxy;
 
-public class ImageImpl implements Image {
+public class RealImage implements Image{
 
     private String fileName;
 
-    public ImageImpl(String fileName) {
+    public RealImage(String fileName) {
         this.fileName = fileName;
         loadFromDisc(fileName);
     }
@@ -13,8 +13,10 @@ public class ImageImpl implements Image {
         System.out.println("FileName: "+fileName);
     }
 
+    @Override
     public void display() {
-        System.out.println("Display");
-        //Show Image
+        System.out.println("Display in real image class............");
     }
+
+
 }
